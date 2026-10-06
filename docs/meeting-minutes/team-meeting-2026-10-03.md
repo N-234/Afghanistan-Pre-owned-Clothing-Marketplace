@@ -1,6 +1,6 @@
 # Team Meeting #1 - Roles and Responsibilities
 
-**Project:** Afghanistan-Pre-owned-Clothing-Marketplace   
+**Project:** Afghanistan Pre-Owned Clothing Marketplace   
 **Meeting Type:** Team Meeting #1  
 **Date:** October 3, 2026  
 **Platform:** Google Meet  
