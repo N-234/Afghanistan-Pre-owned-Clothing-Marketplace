@@ -1,4 +1,4 @@
-# Team Meeting #1 - Roles and Responsibilities
+#Daily Scrum Meeting #1 - Roles and Responsibilities
 
 **Project:** Afghanistan Pre-Owned Clothing Marketplace   
 **Meeting Type:** Team Meeting #1  
