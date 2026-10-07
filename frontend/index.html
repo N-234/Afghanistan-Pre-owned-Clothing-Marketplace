@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afghan Girls Pre-Owned Clothes Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+<nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="index.html">Afghan Girls</a>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#products">Browse Clothes</a>
+        <a href="login.html">Log In</a>
+        <a href="sell.html">Sell Your Clothes</a>
+    </div>
+</nav>
+<header>
+
+    <h1>Afghan Girls' Pre-Owned Clothes Marketplace</h1>
+<p>Buy and sell affordable pre-owned clothes for Afghan girls.</p>
+    <a class="shop-button" href="#products">Browse clothes </a>
+    </header>
+    <main>
+        <section>
+            <div class="filters">
+    <div>
+        <label for="search">Search clothes</label>
+        <input id="search" type="search"
+               placeholder="Search by name or city...">
+    </div>
+
+    <div>
+        <label for="size-filter">Size</label>
+        <select id="size-filter">
+            <option value="all">All sizes</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select>
+    </div>
+</div>
+
+<p id="results-count" role="status"></p>
+<p id="empty-message" hidden>No clothes match your search.</p>
+            <div class="product-grid">
+    <article class="product-card" data-size="M">
+        <div class="product-image" aria-label="Clothing photo placeholder">
+            👕
+        </div>
+        <div class="product-info">
+            <h3>Cotton Shirt</h3>
+            <p>Size: M · Condition: Good</p>
+            <p>Location: Kabul</p>
+            <p class="price">350 AFN</p>
+            <details>
+                <summary>View Details</summary>
+                <p>A comfortable blue cotton shirt for everyday wear.</p>
+            </details>
+        </div>
+    </article>
+
+    <article class="product-card" data-size="L">
+        <div class="product-image" aria-label="Clothing photo placeholder">
+            🧥
+        </div>
+        <div class="product-info">
+            <h3>Winter Jacket</h3>
+            <p>Size: L · Condition: Like New</p>
+            <p>Location: Herat</p>
+            <p class="price">900 AFN</p>
+            <details>
+                <summary>View Details</summary>
+                <p>A warm jacket suitable for cold winter days.</p>
+            </details>
+        </div>
+    </article>
+
+    <article class="product-card" data-size="S">
+        <div class="product-image" aria-label="Clothing photo placeholder">
+            👗
+        </div>
+        <div class="product-info">
+            <h3>Casual Dress</h3>
+            <p>Size: S · Condition: Good</p>
+            <p>Location: Mazar-e-Sharif</p>
+            <p class="price">500 AFN</p>
+            <details>
+                <summary>View Details</summary>
+                <p>A lightweight dress in good condition.</p>
+            </details>
+        </div>
+    </article>
+</div>
+        </section>
+    </main>
+<footer class="site-footer">
+    <div>
+        <h2>Afghan Girls</h2>
+        <p>
+            Give clothes a second life.
+            Buy and sell affordable pre-owned clothing in Afghanistan.
+        </p>
+    </div>
+
+    <a href="#top">Back to top ↑</a>
+
+    <p class="project-note">
+        A university team project — currently under development.
+    </p>
+</footer>
+<script src="script.js"></script>
+
+
+</body>
+</html>
