@@ -33,3 +33,4 @@ searchInput.addEventListener("input", filterClothes);
 sizeFilter.addEventListener("change", filterClothes);
 
 filterClothes();
+

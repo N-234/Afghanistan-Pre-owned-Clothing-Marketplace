@@ -147,3 +147,172 @@ summary:focus-visible,
 [hidden] {
     display: none !important;
 }
+.navbar {
+    max-width: 1100px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.brand {
+    color: #256858;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #333333;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+.nav-links a:hover {
+    color: #256858;
+    text-decoration: underline;
+}
+
+.navbar a:focus-visible {
+    outline: 3px solid #256858;
+    outline-offset: 4px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+.site-footer {
+    max-width: 1100px;
+    margin: 48px auto 0;
+    padding: 28px 20px;
+    background-color: #e2eee8;
+    border-radius: 12px;
+}
+
+.site-footer h2 {
+    margin-top: 0;
+    color: #256858;
+    font-size: 22px;
+}
+
+.site-footer p {
+    font-size: 16px;
+}
+
+.site-footer a {
+    display: inline-block;
+    padding: 8px 0;
+    color: #256858;
+    font-weight: bold;
+}
+
+.site-footer a:focus-visible {
+    outline: 3px solid #256858;
+    outline-offset: 4px;
+}
+
+.site-footer .project-note {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #b5cec2;
+    font-size: 14px;
+}
+.account-page {
+    max-width: 480px;
+    margin: 32px auto;
+    padding: 28px;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #dddddd;
+}
+
+.account-page h1 {
+    font-size: 28px;
+}
+
+.account-page label {
+    display: block;
+    margin: 20px 0 8px;
+    font-weight: bold;
+}
+
+.account-page input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.account-page small {
+    display: block;
+    margin-top: 8px;
+}
+
+.account-button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px;
+    border: 0;
+    border-radius: 8px;
+    background-color: #256858;
+    color: white;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.account-button:hover {
+    background-color: #194a3e;
+}
+
+.account-page input:focus-visible,
+.account-button:focus-visible {
+    outline: 3px solid #256858;
+    outline-offset: 3px;
+}
+
+.account-page .demo-note {
+    font-size: 14px;
+    color: #555555;
+}
+.account-page select,
+.account-page textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #777777;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.account-page textarea {
+    resize: vertical;
+}
+
+.account-page select:focus-visible,
+.account-page textarea:focus-visible {
+    outline: 3px solid #256858;
+    outline-offset: 3px;
+}
+
+#photo-preview {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 16px;
+    border-radius: 8px;
+}
