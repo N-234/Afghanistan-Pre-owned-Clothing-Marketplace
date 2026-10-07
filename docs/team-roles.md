@@ -45,4 +45,4 @@ A task or user story is *Done* when:
 
 **Prepared by:**  
 *Hajar Khawari (Scrum Master)*  
-**Date:** October 6, 2026
+**Date:** October 4, 2026
