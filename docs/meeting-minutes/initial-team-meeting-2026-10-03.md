@@ -2,7 +2,7 @@
 
 **Project:** Afghanistan Pre-Owned Clothing Marketplace   
 **Meeting Type:** Initial Team Meeting #1  
-**Date:** October 3, 2026  
+**Date:** October 4, 2026  
 **Platform:** Google Meet  
 **Duration:** 6 minutes
 
@@ -60,7 +60,7 @@ The purpose of this meeting was to discuss and confirm the Scrum team roles and 
 ## Next Meeting
 
 **Topic:** Project Description, Objectives, and Product Backlog Discussion  
-**Date:** October 4, 2026  
+**Date:** October 5, 2026  
 **Facilitator:** Hajar Khawari (Scrum Master)  
 
 ---
