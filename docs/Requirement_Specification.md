@@ -147,6 +147,7 @@ The initial version of the system will have the following constraints:
 - Direct online payment will not be included in the initial version.
 - The system will depend on internet access.
 - Administrative features will only be available to authorized administrators.
+- The project must be completed and submitted by November 1, 2026.
 
 ---
 
