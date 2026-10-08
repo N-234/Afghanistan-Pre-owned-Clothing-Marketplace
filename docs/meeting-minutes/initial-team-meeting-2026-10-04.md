@@ -59,7 +59,7 @@ The purpose of this meeting was to discuss and confirm the Scrum team roles and 
 
 ## Next Meeting
 
-**Topic:** Project Description, Objectives, and Product Backlog Discussion  
+**Topic:** Project Overview, Objectives, and Product Backlog Discussion  
 **Date:** October 5, 2026  
 **Facilitator:** Hajar Khawari (Scrum Master)  
 
