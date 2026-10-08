@@ -3,7 +3,7 @@
 ## Afghan Girls' Pre-Owned Clothes Marketplace
 
 **Project:** Afghan Girls' Pre-Owned Clothes Marketplace    
-**Date:** 5 October, 2026  
+**Date:** October 5, 2026  
 **Prepared by:** Project Team  
 
 ---
