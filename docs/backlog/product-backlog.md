@@ -2,7 +2,7 @@
 
 **Sara Qateh (Product Owner)**  
 **Software Engineering**  
-**5 October 2026**
+** October 5 2026**
 
 ---
 
