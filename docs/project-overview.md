@@ -1,7 +1,5 @@
 # Project Overview
 
----
-
 **Project Title:** Afghan Girls' Pre-Owned Clothes Marketplace
 
 ---
