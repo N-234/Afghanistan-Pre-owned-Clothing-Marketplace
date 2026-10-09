@@ -186,11 +186,13 @@ Any important change should also be reflected in the Product Backlog.
 
 ---
 
-## Product Owner Review
+## PO Review and Approval
 
-**Product Owner:** Sara Qateh  
+*Product Owner:* Sara Qateh  
+*Review Date:* October 6, 2026  
 
-The Product Owner will review the requirements to confirm that they are consistent with the current project goals and Product Backlog.
+*Approval Statement:*  
+"I have reviewed this Software Requirements Specification and confirmed that it accurately reflects the current project goals, requirements, and Product Backlog. I approve this SRS as the basis for our Sprint planning and development work."
 
 ---
 
