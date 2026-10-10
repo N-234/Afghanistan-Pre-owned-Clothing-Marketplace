@@ -130,7 +130,7 @@ A small issue occurred while organizing the project files on GitHub, but it was 
 - The My Account section should clearly show the logged-in user.
 - More clothing options and categories should be added.
 - Frontend and backend integration will continue to be improved.
-- The team will continue refining the current features before moving fully into the next sprint.
+- The team will apply the Product Owner’s feedback as improvements while preparing for Sprint 2.
 
 ---
 
@@ -149,7 +149,7 @@ A small GitHub file organization issue occurred during development, but it was r
 - Add more clothing categories and varieties.
 - Remove temporary preview messages.
 - Continue improving frontend and backend integration.
-- Review the remaining Sprint 1 improvements before starting Sprint 2.
+- Prepare for the Sprint 1 Retrospective and Sprint 2 Planning.
 
 ---
 
