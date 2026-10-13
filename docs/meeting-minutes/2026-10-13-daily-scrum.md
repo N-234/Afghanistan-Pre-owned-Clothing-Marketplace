@@ -7,7 +7,7 @@
 
 ---
 
-## Meeting Start  
+## Meeting Start
 
 **HAJAR (Scrum Master):**
 
@@ -22,7 +22,7 @@
 
 **NARGIS (Developer):**
 
-Nargis explained that she worked on several frontend improvements.
+Nargis explained that she worked on some frontend fixes from the previous work and also continued Sprint 2 frontend tasks.
 
 Her work included:
 
@@ -45,7 +45,7 @@ Her work included:
 
 **PARWANA (Developer):**
 
-Parwana explained that she worked on the backend and database connection.
+Parwana explained that she completed some backend fixes related to the previous work and also continued Sprint 2 backend development.
 
 Her work included:
 
@@ -72,7 +72,7 @@ Other Sprint 2 work is still continuing.
 
 ---
 
-## Closing  
+## Closing
 
 **HAJAR (Scrum Master):**
 
