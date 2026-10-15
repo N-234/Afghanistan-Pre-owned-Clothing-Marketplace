@@ -62,7 +62,7 @@ Parwana reported that the main Sprint 2 backend work was complete.
 
 Parwana said that the next step is to test the work completed in Sprint 1 and Sprint 2.
 
-The team plans to use the final Sprint day for overall testing and checking that the implemented features are working correctly.
+The team plans to continue testing the implemented features and checking that everything is working correctly.
 
 **Major Blockers:** None reported
 
@@ -146,8 +146,9 @@ Day 4 work also covered:
 - **US-009: Product Information**
 - **NFR-003: Input Validation**
 
-The remaining focus is mainly:
+The remaining Sprint 2 work mainly includes:
 
+- NFR-002: Performance  
 - Category Filter JavaScript fix and testing
 - Final frontend and backend testing
 - Integration checking
@@ -173,6 +174,7 @@ The team will continue testing and fixing small issues before the final Sprint 2
 
 For October 16, 2026, the team plans to:
 
+- Complete NFR-002: Performance  
 - Complete the remaining frontend work
 - Finish final testing
 - Check frontend and backend integration
@@ -189,6 +191,8 @@ For October 16, 2026, the team plans to:
 Hajar reminded the team that October 16 would be the final day of Sprint 2.
 
 She asked the developers to finish as much remaining work as possible, test everything, fix any small problems, and make sure the frontend and backend work well together.
+
+The team will continue working on the remaining Sprint 2 tasks, including performance improvements, final testing, and frontend/backend integration.
 
 The developers will share the final Sprint 2 result so the team can review what has been fully completed.
 
@@ -209,7 +213,7 @@ After the Sprint Review, the team will continue with the Sprint Retrospective to
 
 ## Recording
 
-**Recording Link:** https://drive.google.com/file/d/1XuyvJb8X0a4uoZoer-RCEHgPxWrcYFKD/view?usp=sharing  
+**Recording Link:** https://drive.google.com/file/d/1XuyvJb8X0a4uoZoer-RCEHgPxWrcYFKD/view?usp=sharing    
 
 ---
 
