@@ -8,29 +8,71 @@
 </head>
 <body id="top">
 <nav class="navbar" aria-label="Main navigation">
-    <a class="brand" href="index.html">Afghan Girls</a>
+    <a class="brand" href="/">Afghan Girls</a>
 
     <div class="nav-links">
-        <a href="index.html">Home</a>
+        <a href="/">Home</a>
         <a href="#products">Browse Clothes</a>
-        <a href="login.html">Log In</a>
-        <a href="sell.html">Sell Your Clothes</a>
-    </div>
-</nav>
-<header>
 
-    <h1>Afghan Girls' Pre-Owned Clothes Marketplace</h1>
-<p>Buy and sell affordable pre-owned clothes for Afghan girls.</p>
-    <a class="shop-button" href="#products">Browse clothes </a>
+    {% if logged_in %}
+        <details class="account-menu">
+    <summary class="account-name">
+        🌸 {{ user_name | default('My Account', true) }} ▾
+    </summary>
+
+    <div class="account-dropdown">
+        <a href="/logout">Log Out</a>
+    </div>
+</details>
+    {% else %}
+        <a href="/login">Log In</a>
+    {% endif %}
+        <a href="/sell">Sell Your Clothes</a>
+</div>
+</nav>
+
+<header class="hero">
+    <div class="hero-content">
+    <p class="hero-tagline">Buy • Sell • Reuse</p>
+
+    <h1>
+        Afghan Girls’
+        <span>Pre-Owned Clothes Marketplace</span>
+    </h1>
+
+    <p class="hero-description">
+        Beautiful clothes. Affordable prices. A new story.
+    </p>
+
+    <a class="shop-button" href="#products">
+        Browse Clothes
+    </a>
+</div>
+    <img
+    class="hero-banner"
+    src="../static/images/banner.png"
+    alt="Afghan Girls' Pre-Owned Clothes Marketplace — Buy, Sell, Reuse">
     </header>
     <main>
-        <section>
+        <section id="products">
             <div class="filters">
     <div>
         <label for="search">Search clothes</label>
         <input id="search" type="search"
                placeholder="Search by name or city...">
     </div>
+                <div>
+    <label for="category-filter">Category</label>
+    <select id="category-filter">
+        <option value="all">All categories</option>
+        <option value="wedding">Wedding Dress</option>
+        <option value="dress">Dress</option>
+        <option value="shirt">Shirt</option>
+        <option value="trousers">Trousers</option>
+        <option value="jacket">Jacket</option>
+        <option value="traditional">Traditional Clothes</option>
+    </select>
+</div>
 
     <div>
         <label for="size-filter">Size</label>
@@ -41,59 +83,62 @@
             <option value="L">L</option>
         </select>
     </div>
+                <div>
+    <label for="price-filter">Maximum Price (AFN)</label>
+    <select id="price-filter">
+        <option value="all">Any price</option>
+        <option value="500">Up to 500 AFN</option>
+        <option value="1000">Up to 1,000 AFN</option>
+        <option value="2000">Up to 2,000 AFN</option>
+        <option value="5000">Up to 5,000 AFN</option>
+    </select>
 </div>
+</div>
+            <button type="button" id="clear-filters" class="shop-button">
+    Clear Filters
+</button>
 
 <p id="results-count" role="status"></p>
 <p id="empty-message" hidden>No clothes match your search.</p>
+
             <div class="product-grid">
-    <article class="product-card" data-size="M">
-        <div class="product-image" aria-label="Clothing photo placeholder">
-            👕
-        </div>
-        <div class="product-info">
-            <h3>Cotton Shirt</h3>
-            <p>Size: M · Condition: Good</p>
-            <p>Location: Kabul</p>
-            <p class="price">350 AFN</p>
-            <details>
-                <summary>View Details</summary>
-                <p>A comfortable blue cotton shirt for everyday wear.</p>
-            </details>
-        </div>
-    </article>
 
-    <article class="product-card" data-size="L">
-        <div class="product-image" aria-label="Clothing photo placeholder">
-            🧥
-        </div>
-        <div class="product-info">
-            <h3>Winter Jacket</h3>
-            <p>Size: L · Condition: Like New</p>
-            <p>Location: Herat</p>
-            <p class="price">900 AFN</p>
-            <details>
-                <summary>View Details</summary>
-                <p>A warm jacket suitable for cold winter days.</p>
-            </details>
-        </div>
-    </article>
+    {% for listing in listings %}
+    <article class="product-card"
+         data-size="{{ listing[5] }}"
+         data-category="{{ listing[3] }}">
+        {% if listing[9] %}
+            <img class="product-image"
+                 src="/uploads/{{ listing[9] }}"
+                 alt="{{ listing[2] }}">
+        {% else %}
+            <div class="product-image" aria-label="Clothing photo placeholder">
+                👕
+            </div>
+        {% endif %}
 
-    <article class="product-card" data-size="S">
-        <div class="product-image" aria-label="Clothing photo placeholder">
-            👗
-        </div>
         <div class="product-info">
-            <h3>Casual Dress</h3>
-            <p>Size: S · Condition: Good</p>
-            <p>Location: Mazar-e-Sharif</p>
-            <p class="price">500 AFN</p>
+            <h3>{{ listing[2] }}</h3>
+
+            <p>
+                Size: {{ listing[5] }} ·
+                Condition: {{ listing[6] }}
+            </p>
+
+            <p>Location: {{ listing[7] }}</p>
+
+            <p class="price">{{ listing[4] }} AFN</p>
+
             <details>
                 <summary>View Details</summary>
-                <p>A lightweight dress in good condition.</p>
+                <p>{{ listing[8] }}</p>
             </details>
         </div>
+
     </article>
-</div>
+    {% endfor %}
+
+    </div>
         </section>
     </main>
 <footer class="site-footer">

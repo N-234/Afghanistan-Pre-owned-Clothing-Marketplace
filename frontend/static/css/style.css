@@ -316,3 +316,502 @@ html {
     margin-top: 16px;
     border-radius: 8px;
 }
+/* Afghan Girls — soft pink theme */
+:root {
+    --cream: #fff8f3;
+    --pink: #f8e2e6;
+    --rose: #91445f;
+    --plum: #702342;
+    --sage: #e5eadf;
+    --text: #424b3d;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, var(--pink), var(--cream));
+    border: 1px solid #edcdd5;
+    border-radius: 24px;
+    padding: 56px 24px;
+}
+
+h1,
+header h1,
+.brand,
+.site-footer h2 {
+    color: var(--plum);
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(28px, 5vw, 46px);
+    line-height: 1.2;
+}
+
+.nav-links a {
+    color: var(--plum);
+}
+
+.shop-button,
+.account-button {
+    background: var(--rose);
+    color: white;
+    border-radius: 12px;
+}
+
+.shop-button:hover,
+.account-button:hover {
+    background: var(--plum);
+}
+
+.product-card,
+.account-page {
+    background: white;
+    border: 1px solid #edcdd5;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(112, 35, 66, 0.07);
+}
+
+.product-image {
+    background: var(--pink);
+}
+
+.price,
+summary,
+.site-footer a {
+    color: var(--plum);
+}
+
+.filters input,
+.filters select,
+.account-page input,
+.account-page select,
+.account-page textarea {
+    background: #fffdfb;
+    border-color: #a7808c;
+    border-radius: 12px;
+}
+
+.site-footer {
+    background: var(--sage);
+    border-radius: 24px;
+}
+
+.site-footer .project-note {
+    border-top-color: #bdc7b5;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid var(--plum);
+    outline-offset: 3px;
+}
+.hero-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    margin-bottom: 24px;
+}
+.hero-content {
+    width: 100%;
+    padding: 28px 20px;
+}
+header.hero {
+    display: grid;
+    padding: 0;
+    overflow: hidden;
+}
+
+header.hero > .hero-banner,
+header.hero > .hero-content {
+    grid-area: 1 / 1;
+}
+
+header.hero > .hero-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+header.hero > .hero-content {
+    z-index: 1;
+    align-self: center;
+    justify-self: center;
+    width: 55%;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(24px, 3.5vw, 44px);
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    display: block;
+    margin-top: 12px;
+    font-size: clamp(16px, 2vw, 26px);
+}
+
+@media (max-width: 600px) {
+    header.hero > .hero-banner {
+        min-height: 420px;
+        object-fit: cover;
+    }
+
+    header.hero > .hero-content {
+        width: 70%;
+    }
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.product-card {
+    background: #fffdfb;
+    border: 1px solid #ecd5dc;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(112, 35, 66, 0.08);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+.product-image {
+    height: 240px;
+    background: #f8e2e6;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-top: 0;
+    color: #702342;
+    font-size: 22px;
+}
+
+.product-info p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.product-info .price {
+    color: #91445f;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.product-info summary {
+    color: #702342;
+    cursor: pointer;
+    font-weight: 600;
+}
+.filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 24px;
+    background: #fff0f3;
+    border: 1px solid #ecd5dc;
+    border-radius: 18px;
+    margin-bottom: 24px;
+}
+
+.filters label {
+    display: block;
+    margin-bottom: 8px;
+    color: #702342;
+    font-weight: 600;
+}
+
+.filters input,
+.filters select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 14px;
+    background: #fffdfb;
+    color: #424b3d;
+    border: 1px solid #cba2b0;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.filters input:focus-visible,
+.filters select:focus-visible {
+    outline: 3px solid #91445f;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .filters {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto 24px;
+    padding: 18px 24px;
+    background: #fffdfb;
+    border: 1px solid #ecd5dc;
+    border-radius: 18px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nav-links a {
+    padding: 10px 14px;
+    color: #702342;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+    background: #f8e2e6;
+}
+
+.nav-links a[href="sell.html"] {
+    background: #91445f;
+    color: white;
+}
+
+.nav-links a[href="sell.html"]:hover {
+    background: #702342;
+}
+
+.nav-links a:focus-visible {
+    outline: 3px solid #91445f;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+    }
+}
+.account-page {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 560px;
+    margin: 32px auto;
+    padding: 32px;
+    background: #fffdfb;
+    border: 1px solid #ecd5dc;
+    border-radius: 24px;
+    box-shadow: 0 8px 28px rgba(112, 35, 66, 0.08);
+}
+
+.account-page h1 {
+    color: #702342;
+    text-align: center;
+    font-size: 30px;
+}
+
+.account-page label {
+    display: block;
+    margin-bottom: 8px;
+    color: #702342;
+    font-weight: 600;
+}
+
+.account-page input,
+.account-page select,
+.account-page textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 14px;
+    background: #fff8f3;
+    color: #424b3d;
+    border: 1px solid #cba2b0;
+    border-radius: 10px;
+    font: inherit;
+}
+
+.account-page textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.account-page .account-button {
+    width: 100%;
+    padding: 14px;
+    background: #91445f;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.account-page .account-button:hover {
+    background: #702342;
+}
+
+.account-page a {
+    color: #702342;
+}
+
+@media (max-width: 600px) {
+    .account-page {
+        padding: 22px;
+    }
+}
+.site-footer {
+    box-sizing: border-box;
+    max-width: 1100px;
+    margin: 48px auto 0;
+    padding: 32px 24px;
+    background: #e5eadf;
+    border: 1px solid #cbd3c3;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.site-footer h2 {
+    margin-top: 0;
+    color: #702342;
+    font-family: Georgia, serif;
+    font-size: 26px;
+}
+
+.site-footer p {
+    color: #424b3d;
+    line-height: 1.7;
+}
+
+.site-footer a {
+    display: inline-block;
+    padding: 10px 16px;
+    color: #702342;
+    font-weight: 600;
+    text-underline-offset: 4px;
+}
+
+.site-footer a:hover {
+    background: #fff8f3;
+    border-radius: 10px;
+}
+
+.site-footer .project-note {
+    margin-top: 24px;
+    padding-top: 18px;
+    border-top: 1px solid #bdc7b5;
+    font-size: 14px;
+}
+.filters {
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.filters > div {
+    min-width: 0;
+}
+
+@media (max-width: 700px) {
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}
+.account-name {
+    background: #f8e5ed;
+    color: #75415e;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.account-menu {
+    position: relative;
+}
+
+.account-menu summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.account-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    min-width: 150px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #ead5df;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(80, 40, 60, 0.12);
+    z-index: 100;
+}
+
+.account-dropdown a {
+    display: block;
+    padding: 10px 14px;
+    color: #943e65;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.account-dropdown a:hover {
+    background: #f9edf3;
+}
+.forgot-password-link {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.forgot-password-link a {
+    color: #943e65;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.forgot-password-link a:hover {
+    color: #6e2949;
+}

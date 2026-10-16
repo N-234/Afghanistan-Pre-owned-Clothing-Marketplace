@@ -15,7 +15,7 @@ function checkPasswords() {
 password.addEventListener("input", checkPasswords);
 confirmation.addEventListener("input", checkPasswords);
 
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     checkPasswords();
@@ -24,6 +24,18 @@ form.addEventListener("submit", function (event) {
         return;
     }
 
-    message.textContent =
-        "Form validation passed. Account creation needs the backend.";
+ const formData = new FormData(form);
+
+    const response = await fetch("/signup", {
+        method: "POST",
+        body: formData
+    });
+
+    const result = await response.json();
+
+    message.textContent = result.message;
+
+    if (result.success) {
+        form.reset();
+    }
 });

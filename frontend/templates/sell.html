@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sell Your Clothes | Afghan Girls</title>
-   <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
     <nav class="navbar" aria-label="Main navigation">
-        <a class="brand" href="index.html">Afghan Girls</a>
-        <a href="index.html">Back to Home</a>
+        <a class="brand" href="/">Afghan Girls</a>
+        <a href="/">Back to Home</a>
     </nav>
 
     <main class="account-page">
@@ -24,6 +24,7 @@
             <label for="category">Category</label>
             <select id="category" name="category" required>
                 <option value="">Select category</option>
+                <option value="wedding">Wedding Dress</option>
                 <option value="dress">Dress</option>
                 <option value="shirt">Shirt</option>
                 <option value="trousers">Trousers</option>
@@ -78,8 +79,14 @@
             <button class="account-button" type="submit" disabled>
                 Preview Listing
             </button>
-
+<button class="account-button"
+        id="publish-button"
+        type="button"
+        disabled>
+    Publish Listing
+</button>
             <p id="sell-message" role="status"></p>
+
         </form>
         <section id="listing-preview" hidden
          aria-labelledby="preview-heading">
@@ -104,7 +111,7 @@
 </section>
 
         <p class="demo-note">
-            Preview only. Publishing will require a logged-in account.
+            Review your listing, then click Publish Listing to publish it.
         </p>
     </main>
 <script src="../static/js/sell.js"></script>
