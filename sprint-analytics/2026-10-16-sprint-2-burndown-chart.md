@@ -87,6 +87,12 @@
 
 ---
 
+## 📈 Sprint 2 Burndown Chart
+
+![Sprint 2 Burndown Chart](images/Sprint-2-Burndown-Chart.png)
+
+---
+
 ## Progress Analysis
 
 **Velocity:** 33 story points completed in 5 days = 6.6 story points/day average
