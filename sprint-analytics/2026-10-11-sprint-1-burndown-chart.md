@@ -123,6 +123,12 @@ Day 2: 0
 
 ---
 
+## 📈 Sprint 1 Burndown Chart
+
+![Sprint 1 Burndown Chart](Sprint-1-Burndown-Chart.png)
+
+---
+
 ## Analysis
 
 **Story Points Planned:** 28  
