@@ -125,7 +125,7 @@ Day 2: 0
 
 ## 📈 Sprint 1 Burndown Chart
 
-![Sprint 1 Burndown Chart](Sprint-1-Burndown-Chart.png)
+![Sprint 1 Burndown Chart](images/Sprint-1-Burndown-Chart.png)
 
 ---
 
