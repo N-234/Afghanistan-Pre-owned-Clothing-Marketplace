@@ -1,4 +1,4 @@
-# Sprint 4 Planning Meeting Notes
+# Sprint 4 Planning Meeting 
 
 **Project:** Afghan Girls' Pre-Owned Clothes Marketplace  
 **Meeting Type:** Sprint Planning  
