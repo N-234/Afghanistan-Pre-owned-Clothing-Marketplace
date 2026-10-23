@@ -93,9 +93,7 @@ The backend work for Report Listing was completed, and **US-016 Review Reports**
 
 ## ⚠️ Blockers
 
-No major technical blockers were reported.
-
-The developers mentioned that university oral exams reduced the time available for development, but the planned Report Listing and Review Reports work was completed.
+No major blockers were reported during the meeting.
 
 ---
 
