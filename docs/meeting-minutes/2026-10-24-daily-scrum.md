@@ -52,7 +52,7 @@ This was the third Daily Scrum for Sprint 4. The goal was to review the progress
 - Worked on administrator functionality for managing user accounts.
 - Added functionality that allows the administrator to manage user accounts.
 - Added support for deactivating a user account when needed.
-- Confirmed that the Manage Users work would be completed by the end of the day.
+- Confirmed that the main Manage Users work would be completed by the end of the day.
 - **No blockers.**
 
 ---
@@ -66,7 +66,7 @@ This was the third Daily Scrum for Sprint 4. The goal was to review the progress
 
 ## Decisions & Next Steps
 
-1. **US-017 Manage Users** was completed by the end of Day 3.
+1. The main work for **US-017 Manage Users** was completed by the end of Day 3.
 2. Start working on **US-018 Monitor Listings**.
 3. Continue with **NFR-004 Administrator Access**.
 4. Continue frontend and backend integration.
