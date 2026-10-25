@@ -62,8 +62,9 @@ The goal was to check progress on the remaining Sprint 4 work, especially **Moni
 
 ## Blockers
 
-- Issues were found in **Manage Users** and the administrator view.
-- These issues delayed progress on Monitor Listings and Administrator Access.
+- Issues were found in the completed **Manage Users** functionality and the administrator view.
+- The team focused on fixing these issues before continuing the remaining Sprint 4 work.
+- These issues delayed progress on **Monitor Listings** and **Administrator Access**.
 - The team requested one additional day to complete the remaining Sprint 4 work.
 
 ---
@@ -87,15 +88,15 @@ The goal was to check progress on the remaining Sprint 4 work, especially **Moni
 - Day 4 of the Sprint
 - US-015 Report Listing: **Completed**
 - US-016 Review Reports: **Completed**
-- US-017 Manage Users: **In Progress / Issue Fixing**
+- US-017 Manage Users: **Completed – issue fixing**
 - US-018 Monitor Listings: **Not Completed**
 - NFR-004 Administrator Access: **Not Completed**
 
 **Story Points:**
 
 - Total: **23 points**
-- Fully Completed: **10 points**
-- Remaining: **13 points**
+- Completed: **15 points**
+- Remaining: **8 points**
 
 **Note:** Manage Users still had issues during Day 4, so its Story Points should not be counted as completed yet.
 
