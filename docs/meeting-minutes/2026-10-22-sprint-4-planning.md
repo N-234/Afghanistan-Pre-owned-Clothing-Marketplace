@@ -32,7 +32,7 @@ The main focus of Sprint 4 is **Administration and Safety**.
 
 The goal is to give administrators the tools they need to manage reports, users, and listings while helping keep the marketplace safe.
 
-Sprint 4 runs from **October 22 to October 26, 2026**.
+Sprint 4 was originally planned to run from October 22 to October 26, 2026.
 
 A total of **23 Story Points** are planned for this Sprint.
 
@@ -121,6 +121,18 @@ They were asked to stay in contact while working on this feature so that both pa
 ▪ Complete final testing  
 ▪ Conduct Sprint Review  
 ▪ Conduct Sprint Retrospective  
+
+---
+
+## Sprint Schedule Update
+
+Sprint 4 was originally planned as a five-day Sprint from **October 22 to October 26, 2026**.
+
+During development, the team faced issues with the administrative functionality and needed one additional development day.
+
+Sprint 4 was therefore extended to **October 27, 2026**.
+
+The additional day was used to complete the remaining work, continue testing, fix issues, and conduct the Sprint Review and Sprint Retrospective.
 
 ---
 
