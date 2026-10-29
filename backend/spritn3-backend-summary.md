@@ -61,12 +61,3 @@ In Sprint 4, I will work on adminstrator dashboard and report listing and the li
 - Adming vegin able to view availabel, removed, and sold lstings.
 
 These features will help admin manage the users easily, and also to manage the inapproporiate or suspicious listings. 
-
-
-
-# Sprint 3: Backend Work Summary
-
-**Project:** Afghan Girls' Pre-Owned Clothes Marketplace  
-**Developer:** Parwana Jafari  
-**Sprint:** 3
-
