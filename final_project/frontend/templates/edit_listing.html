@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Listing | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="/">Afghan Girls' Marketplace</a>
+        <div class="nav-links">
+            <a href="/dashboard">Back to My Listings</a>
+        </div>
+
+    </nav>
+
+    <main class="account-page">
+        <h1>Edit Your Listing</h1>
+        <p>Update your clothing details, then save your changes.</p>
+
+        <form id="edit-listing-form" enctype="multipart/form-data">
+            <input type="hidden" id="listing-id" name="listing_id">
+
+            <label for="item-name">Clothing name</label>
+            <input id="item-name" name="title"
+                   type="text" maxlength="100" required>
+
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select category</option>
+                <option value="wedding">Wedding Dress</option>
+                <option value="dress">Dress</option>
+                <option value="shirt">Shirt</option>
+                <option value="trousers">Trousers</option>
+                <option value="jacket">Jacket</option>
+                <option value="traditional">Traditional Clothes</option>
+            </select>
+
+            <label for="price">Price (AFN)</label>
+            <input id="price" name="price"
+                   type="number" min="1" step="1" required>
+            <label for="size">Size</label>
+             <select id="size" name="size" required>
+                   <option value="">Select size</option>
+                                 <option>XS</option>
+                                 <option>S</option>
+                                <option>M</option>
+                                 <option>L</option>
+                                <option>XL</option>
+                              <option>Other</option>
+             </select>
+
+            <label for="condition">Condition</label>
+<select id="condition" name="condition" required>
+    <option value="">Select condition</option>
+    <option>New</option>
+    <option>Like New</option>
+    <option>Good</option>
+    <option>Used</option>
+</select>
+
+            <label for="city">City</label>
+            <input id="city" name="city"
+                   type="text" maxlength="100" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description"
+                      rows="4" maxlength="2000" required></textarea>
+
+            <label for="photo">Replace photo (optional)</label>
+            <input id="photo" name="photo" type="file"
+                   accept="image/jpeg,image/png,image/webp"
+                   aria-describedby="photo-help">
+            <small id="photo-help">
+                Leave this empty to keep your current photo.
+            </small>
+
+            <button class="account-button" type="submit">
+                Save Changes
+            </button>
+
+            <p id="edit-message" role="status"></p>
+        </form>
+<section class="listing-status" aria-labelledby="status-heading">
+    <h2 id="status-heading">Listing Status</h2>
+
+    <p>
+        Current status:
+        <strong id="listing-status" role="status">Not loaded</strong>
+    </p>
+
+    <button
+        id="mark-sold-button"
+        class="account-button"
+        type="button"
+        disabled>
+        Mark as Sold
+    </button>
+
+    <button
+        id="mark-unavailable-button"
+        class="account-button"
+        type="button"
+        disabled>
+        Mark as Unavailable
+    </button>
+
+    <button
+    id="mark-available-button"
+    class="account-button"
+    type="button"
+    disabled>
+    Mark as Available
+    </button>
+
+    <button
+        id="delete-listing-button"
+        class="account-button"
+        type="button"
+        disabled>
+        Delete Listing
+    </button>
+
+    <p id="sold-message" role="status"></p>
+</section>
+    </main>
+
+    <script src="../static/js/edit_listing.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="/">Afghan Girls' Marketplace</a>
+
+    <div class="nav-links">
+        <a href="/">Back to Home</a>
+    </div>
+    </nav>
+
+    <main class="account-page">
+        <h1>Your Inbox</h1>
+        <p>Read buyers’ messages about your clothing listings.</p>
+
+        <button
+            id="refresh-messages"
+            class="account-button"
+            type="button"
+        >
+            Refresh Messages
+        </button>
+
+        <p id="inbox-status" role="status"></p>
+
+        <p id="inbox-empty" hidden>
+            You have no messages yet.
+        </p>
+
+        <a id="inbox-login" href="/login" hidden>
+            Log in to view your messages
+        </a>
+
+        <section
+            id="messages-list"
+            aria-label="Received messages"
+            aria-busy="false"
+        ></section>
+    </main>
+
+    <script src="../static/js/inbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <a class="brand" href="/">Afghan Girls' Marketplace</a>
+
+        <div class="nav-links">
+            <a href="/">View Marketplace</a>
+            <a href="/admin/manage-admins">Manage Admins</a>
+        </div>
+    </nav>
+
+    <main class="admin-page">
+
+        <h1>Admin Dashboard</h1>
+        <p>Welcome to the Afghan Girls' Marketplace administration panel.</p>
+
+        <!-- Reports Management -->
+        <section id="reports">
+            <h2>Reports Management</h2>
+            <p>Review reports submitted by users.</p>
+
+            {% if reports %}
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Report ID</th>
+                            <th>Listing</th>
+                            <th>Reported By</th>
+                            <th>Reason</th>
+                            <th>Details</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for report in reports %}
+                        <tr>
+                            <td>{{ report.id }}</td>
+                            <td>{{ report.title }}</td>
+                            <td>{{ report.reporter_name }}</td>
+                            <td>{{ report.reason }}</td>
+                            <td>{{ report.details or 'No details provided' }}</td>
+                            <td>{{ report.created_at }}</td>
+                            <td>{{ report.status }}</td>
+
+                            <td>
+                                {% if report.status == 'pending' %}
+
+                                <form action="/admin/reports/{{ report.id }}/update"
+                                      method="POST"
+                                      class="admin-confirm-form"
+                                      data-message="Are you sure you want to mark this report as reviewed?"
+                                      data-button="Review">
+
+                                    <input type="hidden" name="status" value="reviewed">
+
+                                    <button type="submit" class="admin-action-button">
+                                        Review
+                                    </button>
+                                </form>
+
+                                <form action="/admin/reports/{{ report.id }}/update"
+                                      method="POST"
+                                      class="admin-confirm-form"
+                                      data-message="Are you sure you want to dismiss this report?"
+                                      data-button="Dismiss">
+
+                                    <input type="hidden" name="status" value="dismissed">
+
+                                    <button type="submit" class="admin-action-button">
+                                        Dismiss
+                                    </button>
+                                </form>
+
+                                <form action="/admin/reports/{{ report.id }}/update"
+                                      method="POST"
+                                      class="admin-confirm-form"
+                                      data-message="Are you sure you want to remove this listing from the marketplace?"
+                                      data-button="Delete Listing">
+
+                                    <input type="hidden" name="status" value="delete_listing">
+
+                                    <button type="submit" class="admin-action-button">
+                                        Delete
+                                    </button>
+                                </form>
+
+                                {% else %}
+                                    No actions available
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% else %}
+                <p>No reports have been submitted yet.</p>
+            {% endif %}
+        </section>
+
+
+        <!-- User Management -->
+        <section id="users">
+            <h2>User Management</h2>
+            <p>View, deactivate, and reactivate user accounts.</p>
+
+            {% if users %}
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Account Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for user in users %}
+                        <tr>
+                            <td>{{ user.id }}</td>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.role }}</td>
+
+                            <td>
+                                {% if user.is_active == 1 %}
+                                    Active
+                                {% else %}
+                                    Deactivated
+                                {% endif %}
+                            </td>
+
+                            <td>
+                                {% if user.role != 'admin' %}
+
+                                    {% if user.is_active == 1 %}
+
+                                    <form action="/admin/users/{{ user.id }}/update"
+                                          method="POST"
+                                          class="admin-confirm-form"
+                                          data-message="Are you sure you want to deactivate this account?"
+                                          data-button="Deactivate">
+
+                                        <input type="hidden" name="action" value="deactivate">
+
+                                        <button type="submit" class="admin-action-button">
+                                            Deactivate
+                                        </button>
+                                    </form>
+
+                                    {% else %}
+
+                                    <form action="/admin/users/{{ user.id }}/update"
+                                          method="POST"
+                                          class="admin-confirm-form"
+                                          data-message="Are you sure you want to reactivate this account?"
+                                          data-button="Reactivate">
+
+                                        <input type="hidden" name="action" value="activate">
+
+                                        <button type="submit" class="admin-action-button">
+                                            Reactivate
+                                        </button>
+                                    </form>
+
+                                    {% endif %}
+
+                                {% else %}
+                                    Admin Account
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% else %}
+                <p>No users found.</p>
+            {% endif %}
+        </section>
+
+
+        <!-- Listing Management -->
+        <section id="listings">
+            <h2>Listing Management</h2>
+            <p>View and manage all marketplace listings.</p>
+
+            {% if listings %}
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Listing ID</th>
+                            <th>Title</th>
+                            <th>Seller</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for listing in listings %}
+                        <tr>
+                            <td>{{ listing.id }}</td>
+                            <td>{{ listing.title }}</td>
+                            <td>{{ listing.seller_name }}</td>
+                            <td>{{ listing.category }}</td>
+                            <td>{{ listing.price }}</td>
+                            <td>{{ listing.status }}</td>
+
+                            <td>
+                                {% if listing.status != 'removed' %}
+
+                                <form action="/admin/listings/{{ listing.id }}/update"
+                                      method="POST"
+                                      class="admin-confirm-form"
+                                      data-message="Are you sure you want to remove this listing?"
+                                      data-button="Remove">
+
+                                    <input type="hidden" name="action" value="remove">
+
+                                    <button type="submit" class="admin-action-button">
+                                        Remove
+                                    </button>
+                                </form>
+
+                                {% else %}
+
+                                <form action="/admin/listings/{{ listing.id }}/update"
+                                      method="POST"
+                                      class="admin-confirm-form"
+                                      data-message="Are you sure you want to restore this listing?"
+                                      data-button="Restore">
+
+                                    <input type="hidden" name="action" value="restore">
+
+                                    <button type="submit" class="admin-action-button">
+                                        Restore
+                                    </button>
+                                </form>
+
+                                {% endif %}
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% else %}
+                <p>No listings found.</p>
+            {% endif %}
+        </section>
+
+    </main>
+
+
+    <!-- Custom Confirmation Popup -->
+    <div id="adminConfirmPopup" class="admin-popup-overlay">
+
+        <div class="admin-popup">
+            <h3>Are you sure?</h3>
+
+            <p id="adminPopupMessage">
+                Please confirm this action.
+            </p>
+
+            <div class="admin-popup-buttons">
+                <button type="button" id="adminCancelButton">
+                    Cancel
+                </button>
+
+                <button type="button" id="adminConfirmButton">
+                    Confirm
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Popup JavaScript -->
+    <script>
+        const popup = document.getElementById("adminConfirmPopup");
+        const popupMessage = document.getElementById("adminPopupMessage");
+        const cancelButton = document.getElementById("adminCancelButton");
+        const confirmButton = document.getElementById("adminConfirmButton");
+
+        let selectedForm = null;
+
+        const adminForms = document.querySelectorAll(".admin-confirm-form");
+
+        adminForms.forEach(function(form) {
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                selectedForm = form;
+
+                popupMessage.textContent = form.dataset.message;
+                confirmButton.textContent = form.dataset.button;
+
+                popup.style.display = "flex";
+            });
+        });
+
+        cancelButton.addEventListener("click", function() {
+            popup.style.display = "none";
+            selectedForm = null;
+        });
+
+        confirmButton.addEventListener("click", function() {
+            if (selectedForm) {
+                selectedForm.submit();
+            }
+        });
+
+        popup.addEventListener("click", function(event) {
+            if (event.target === popup) {
+                popup.style.display = "none";
+                selectedForm = null;
+            }
+        });
+    </script>
+
+</body>
+</html>

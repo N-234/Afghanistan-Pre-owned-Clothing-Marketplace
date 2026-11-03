@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Listing | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="/">Afghan Girls' Marketplace</a>
+
+        <div class="nav-links">
+            <a href="/#products">Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="account-page">
+        <h1>Report Listing</h1>
+        <p>Please tell us why you are reporting this clothing item.</p>
+
+        <div class="report-listing-summary">
+            <h3>{{ listing[0] }}</h3>
+            <p>Category: {{ listing[1] }}</p>
+            <p>Price: {{ listing[2] }} AFN</p>
+            <p>Size: {{ listing[3] }}</p>
+            <p>Condition: {{ listing[4] }}</p>
+            <p>Location: {{ listing[5] }}</p>
+        </div>
+
+        <form id="report-form">
+            <input type="hidden" id="report-listing-id"
+                   value="{{ listing_id }}">
+
+            <label for="report-reason">Reason for reporting</label>
+            <select id="report-reason" required>
+                <option value="">Select a reason</option>
+                <option value="Inappropriate content">Inappropriate content</option>
+                <option value="Fake listing">Fake listing</option>
+                <option value="Misleading information">Misleading information</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="report-details">Additional details (optional)</label>
+            <textarea
+                id="report-details"
+                rows="4"
+                maxlength="1000"
+                placeholder="Explain the problem..."
+            ></textarea>
+
+            <button class="account-button" type="submit">
+                Submit Report
+            </button>
+
+            <p id="report-message" role="status"></p>
+        </form>
+    </main>
+
+    <script src="../static/js/report_listing.js"></script>
+</body>
+</html>

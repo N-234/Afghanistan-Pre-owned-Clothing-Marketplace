@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Admins | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="/">Afghan Girls' Marketplace</a>
+
+        <div class="nav-links">
+            <a href="/">View Marketplace</a>
+            <a href="/admin">Admin Dashboard</a>
+
+        </div>
+    </nav>
+
+    <main class="account-page">
+        <h1>Create Admin Account</h1>
+        <p>Add a new administrator to the marketplace.</p>
+
+        {% if message %}
+            <p role="status">{{ message }}</p>
+        {% endif %}
+
+        <form method="POST" action="/admin/manage-admins" autocomplete="off">
+
+            <label for="full_name">Full name</label>
+            <input
+                id="full_name"
+                name="full_name"
+                type="text"
+                maxlength="100"
+                autocomplete="off"
+                required
+            >
+
+            <label for="email">Email address</label>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="off"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                required
+            >
+            <p id="password-error" style="color: red;"></p>
+
+            <button class="account-button" type="submit">
+                Create Admin
+            </button>
+
+        </form>
+    </main>
+
+<script>
+    const adminForm = document.querySelector("form");
+    const passwordInput = document.querySelector("#password");
+    const passwordError = document.querySelector("#password-error");
+
+    adminForm.addEventListener("submit", function(event) {
+        if (passwordInput.value.length < 8) {
+            event.preventDefault();
+            passwordError.textContent = "Password must be at least 8 characters long.";
+        } else {
+            passwordError.textContent = "";
+        }
+    });
+
+    passwordInput.addEventListener("input", function() {
+        passwordError.textContent = "";
+    });
+</script>
+
+</body>
+</html>

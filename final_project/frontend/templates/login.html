@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+         <a class="brand" href="/">Afghan Girls' Marketplace</a>
+
+        <div class="nav-links">
+            <a href="/">Back to Home</a>
+        </div>
+    </nav>
+
+    <main class="account-page">
+        <h1>Welcome Back</h1>
+        <p>Log in first to manage your clothing listings.</p>
+
+        <form id="login-form">
+            <label for="email">Email address</label>
+            <input id="email" name="email"
+                   type="email" autocomplete="username" required>
+
+            <label for="password">Password</label>
+            <input id="password" name="password"
+                   type="password"
+                   autocomplete="current-password" required>
+
+            <button class="account-button" type="submit">
+                Log In
+            </button>
+
+            <p id="login-message" role="status"></p>
+        </form>
+<p class="forgot-password-link">
+    <a href="/forgot-password">Forgot password?</a>
+</p>
+        <p>Don't have an account?
+            <a href="/signup">Sign Up</a>
+        </p>
+
+
+    </main>
+
+    <script src="../static/js/login.js"></script>
+</body>
+</html>

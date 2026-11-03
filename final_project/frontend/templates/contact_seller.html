@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Seller | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="/">Afghan Girls' Marketplace</a>
+
+    <div class="nav-links">
+        <a href="/#products">Back to Home</a>
+    </div>
+    </nav>
+
+    <main class="account-page">
+        <h1>Contact Seller</h1>
+        <p>Ask the seller about this clothing item.</p>
+
+        <p id="listing-summary" role="status">
+            Loading clothing details...
+        </p>
+
+        <form id="contact-seller-form">
+            <label for="message">Your message</label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                maxlength="2000"
+                placeholder="Hello, is this item still available?"
+                aria-describedby="message-help"
+                required
+            ></textarea>
+
+            <small id="message-help">
+                Write up to 2,000 characters.
+            </small>
+
+            <button
+                id="send-message-button"
+                class="account-button"
+                type="submit"
+                disabled
+            >
+                Send Message
+            </button>
+
+            <p id="contact-message" role="status"></p>
+        </form>
+    </main>
+
+<script>
+    window.currentUserId = {{ current_user_id | tojson }};
+</script>
+<script src="../static/js/contact_seller.js"></script>
+</body>
+</html>

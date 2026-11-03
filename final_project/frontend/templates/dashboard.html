@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Listings | Afghan Girls' Marketplace</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <nav class="navbar" aria-label="Main navigation">
+    <a class="brand" href="/">Afghan Girls' Marketplace</a>
+
+    <div class="nav-links">
+        <a href="/">Back to Home</a>
+        <a href="/sell">Sell Clothes</a>
+        <a href="/logout">Logout</a>
+    </div>
+    </nav>
+
+    <main class="account-page">
+        <h1>My Listings</h1>
+        <p>Manage your clothing listings here.</p>
+
+
+        <a href="/sell" class="account-button">Add New Listing</a>
+
+        {% if listings %}
+            {% for listing in listings %}
+                <section class="listing-status">
+                    <h2>{{ listing["title"] }}</h2>
+
+                    {% if listing["photo"] %}
+
+                    <div class="product-image">
+                        <img
+                            src="/uploads/{{ listing['photo'] }}"
+                            alt="{{ listing['title'] }}"
+                        >
+                    </div>
+
+                    {% endif %}
+
+                    <p>Category: {{ listing["category"] }}</p>
+                    <p>Price: {{ listing["price"] }} AFN</p>
+                    <p>Size: {{ listing["size"] }}</p>
+                    <p>Condition: {{ listing["condition"] }}</p>
+                    <p>City: {{ listing["city"] }}</p>
+
+                    <p>
+                        Status:
+                        <strong>
+                            {{ listing["status"]|capitalize }}
+                        </strong>
+                    </p>
+
+                    <a href="/edit_listing?id={{ listing['id'] }}" class="account-button">
+                        Edit Listing
+                    </a>
+
+
+
+                </section>
+            {% endfor %}
+        {% else %}
+            <p>You have not posted any listings yet.</p>
+        {% endif %}
+    </main>
+</body>
+</html>
